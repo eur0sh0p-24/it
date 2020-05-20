@@ -15,19 +15,9 @@ if (file_exists(dirname(__FILE__) . '/leadrock-integration')) {
 }
 $integration = new \Leadrock\Layouts\Landing();
 $integration
-    ->findTrackIn('track_id')
-    ->addProvider(new \Leadrock\Providers\File('leads.log'))
-    ->addProvider(new \Leadrock\Providers\Leadrock('8057', '7222179dc057653e1637fa01bdfdf5dd'))
-    ->setWebmasterLink('https://leadrock.com/URL-F51A5-20265')
-    ->setThankyouPage('thankyou.php')
-    ->setFormField('user_name', 'name')
-    ->setFormField('user_phone', 'phone')
-    ->setFormField('other', 'other')
-    ->addFormValidator()
-    ->addFacebookPixel((new \Leadrock\Items\FacebookPixel('687631435336411'))->setEvent('PageView'))
-    
+    ->addFacebookPixel((new \Leadrock\Items\FacebookPixel('687631435336411'))->setEvent('Lead'))
 ;
-include 'landing.html';
+include 'confirm.html';
 $integration->end();
 
 
